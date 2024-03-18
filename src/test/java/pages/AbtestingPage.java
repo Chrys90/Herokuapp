@@ -1,7 +1,10 @@
 package pages;
 
+import dados.DadosTeste;
 import maps.AbtestingMaps;
 import org.junit.Assert;
+
+import java.io.IOException;
 
 public class AbtestingPage {
 
@@ -49,5 +52,11 @@ public class AbtestingPage {
             return "Variação do Título com o Teste B";
         }
             return "O teste falhou";
+    }
+
+    public void validarTxtParagrafo() throws IOException {
+        String resultadoAtual =abtestingMaps.textoParagrafo.getText();
+        String resultadoEsperado = DadosTeste.getAbTestingParagrafo();
+        Assert.assertEquals(resultadoEsperado, resultadoAtual);
     }
 }

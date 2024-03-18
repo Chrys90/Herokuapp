@@ -2,9 +2,11 @@ package Suporte;
 
 import enums.Browser;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import runner.RunnerTest;
 
@@ -39,7 +41,6 @@ public class Driver {
         }
     }
 
-
     public static WebDriver navegador(Browser browser) {
         if (driver != null) {
             driver.quit();
@@ -68,13 +69,20 @@ public class Driver {
         return driver;
     }
 
-
     public static void acessarSite(String site) {
         getDriver().get(site);
     }
 
     public static void fecharNavegador() {
         getDriver().quit();
+    }
+
+    public static void visibilityOf(WebElement element) {
+        wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
+    public static void invisibilityOf(WebElement element) {
+        wait.until(ExpectedConditions.invisibilityOf(element));
     }
 
 }

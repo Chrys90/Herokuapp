@@ -1,5 +1,5 @@
 #language:pt
-
+  @abTesting
   Funcionalidade: Validar pagina A/B Testing
 
     Cenario: Validar acesso ao link AB testing

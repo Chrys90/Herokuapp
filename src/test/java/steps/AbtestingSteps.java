@@ -1,4 +1,4 @@
-package steps.Abtesting;
+package steps;
 
 import Suporte.Driver;
 import io.cucumber.java.pt.Dado;
@@ -6,7 +6,9 @@ import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
 import pages.AbtestingPage;
 
-public class steps {
+import java.io.IOException;
+
+public class AbtestingSteps {
 
     AbtestingPage abtestingPage = new AbtestingPage();
 
@@ -20,9 +22,10 @@ public class steps {
 
     }
     @Entao("devo ser direcionado para a pagina referente ao assunto AB Testing")
-    public void devo_ser_direcionado_para_a_pagina_referente_ao_assunto_ab_testing() {
+    public void devo_ser_direcionado_para_a_pagina_referente_ao_assunto_ab_testing() throws IOException {
         String resultado = abtestingPage.verificarResultado();
         System.out.println(resultado);
+        abtestingPage.validarTxtParagrafo();
     }
 
 
