@@ -17,7 +17,7 @@ public class AbtestingMaps {
     @FindBy (css = "#content > div> h3")
     public WebElement tituloPagina;
 
-    @FindBy (xpath = "#content > div >p")
+    @FindBy (css = "#content > div >p")
     public  WebElement textoParagrafo;
 
 }

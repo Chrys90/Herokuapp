@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/features/",
-        tags = "",
+        tags = "@addRemoveElements",
         glue = {"steps", "hooks"},
         plugin = {"json:target/reports/CucumberReports.json", "pretty"},
         monochrome = true,
