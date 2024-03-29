@@ -1,8 +1,8 @@
 package pages;
 
+import Suporte.Utils;
 import dados.DadosTeste;
 import maps.AbtestingMaps;
-import org.junit.Assert;
 
 import java.io.IOException;
 
@@ -11,12 +11,11 @@ public class AbtestingPage {
     AbtestingMaps abtestingMaps = new AbtestingMaps();
 
     public void clicarLinkAbTesting(){
-        abtestingMaps.linkAbTesting.click();
+        Utils.clique(abtestingMaps.linkAbTesting);
     }
 
     public void validarTituloPagina(String resultadoEsperado) {
-        String resultadoAtual = abtestingMaps.tituloPagina.getText();
-        Assert.assertEquals(resultadoEsperado, resultadoAtual);
+        Utils.validarMensagem(abtestingMaps.tituloPagina, resultadoEsperado );
     }
 
     public boolean validarResultadoTesteA() {
@@ -55,8 +54,6 @@ public class AbtestingPage {
     }
 
     public void validarTxtParagrafo() throws IOException {
-        String resultadoAtual =abtestingMaps.textoParagrafo.getText();
-        String resultadoEsperado = DadosTeste.getAbTestingParagrafo();
-        Assert.assertEquals(resultadoEsperado, resultadoAtual);
+        Utils.validarMensagem(abtestingMaps.textoParagrafo,DadosTeste.getAbTestingParagrafo() );
     }
 }

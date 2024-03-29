@@ -2,6 +2,7 @@
   @abTesting
   Funcionalidade: Validar pagina A/B Testing
 
+    @abTestingSucesso
     Cenario: Validar acesso ao link AB testing
       Dado que estou na pagina inicial
       Quando clicar no link AB Testing

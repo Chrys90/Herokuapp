@@ -3,32 +3,29 @@ package pages;
 import Suporte.Driver;
 import Suporte.Utils;
 import maps.AddRemoveElementsMaps;
-import org.junit.Assert;
 
 public class AddRemoveElementsPage {
 
     AddRemoveElementsMaps addRemoveElementsMaps = new AddRemoveElementsMaps();
 
     public void clicarlinkAddRemoveElements(){
-        addRemoveElementsMaps.linkAddRemoveElements.click();
+        Utils.clique(addRemoveElementsMaps.linkAddRemoveElements);
     }
 
     public void clicarAddElements(){
-        addRemoveElementsMaps.btnAddElement.click();
-        addRemoveElementsMaps.btnAddElement.click();
-        addRemoveElementsMaps.btnAddElement.click();
+        Utils.clique(addRemoveElementsMaps.btnAddElement);
+        Utils.clique(addRemoveElementsMaps.btnAddElement);
+        Utils.clique(addRemoveElementsMaps.btnAddElement);
     }
 
     public void clicarDelete(){
-        addRemoveElementsMaps.btnDelete.click();
-        addRemoveElementsMaps.btnDelete.click();
-        addRemoveElementsMaps.btnDelete.click();
+        Utils.clique(addRemoveElementsMaps.btnDelete);
+        Utils.clique(addRemoveElementsMaps.btnDelete);
+        Utils.clique(addRemoveElementsMaps.btnDelete);
     }
 
     public void validarTituloPagina(){
-        String resultadoAtual = addRemoveElementsMaps.txtTituloPagina.getText();
-        String resultadoEsperado = "Add/Remove Elements";
-        Assert.assertEquals(resultadoEsperado, resultadoAtual);
+        Utils.validarMensagem(addRemoveElementsMaps.txtTituloPagina,"Add/Remove Elements");
     }
 
     public void validarExclusaoBtnDelete(){

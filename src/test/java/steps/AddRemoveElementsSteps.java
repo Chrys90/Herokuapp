@@ -6,7 +6,7 @@ import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
 import pages.AddRemoveElementsPage;
 
-public class AddRemoveElementsSteps {
+public class AddRemoveElementsSteps  {
 
     AddRemoveElementsPage addRemoveElementsPage = new AddRemoveElementsPage();
 
