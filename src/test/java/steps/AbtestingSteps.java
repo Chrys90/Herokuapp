@@ -8,7 +8,7 @@ import pages.AbtestingPage;
 
 import java.io.IOException;
 
-public class AbtestingSteps {
+public class AbtestingSteps  {
 
     AbtestingPage abtestingPage = new AbtestingPage();
 
