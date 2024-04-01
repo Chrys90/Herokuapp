@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/features/",
-        tags = "@disappering",
+        tags = "@drag_drop",
         glue = {"steps", "hooks"},
         plugin = {"json:target/reports/CucumberReports.json", "pretty"},
         monochrome = true,
