@@ -1,6 +1,7 @@
 package pages;
 
-import Suporte.Utils;
+import Suporte.PreencherCampos;
+import Suporte.CliqueCommands;
 import dados.DadosTeste;
 import maps.AbtestingMaps;
 
@@ -11,11 +12,11 @@ public class AbtestingPage {
     AbtestingMaps abtestingMaps = new AbtestingMaps();
 
     public void clicarLinkAbTesting(){
-        Utils.clique(abtestingMaps.linkAbTesting);
+        CliqueCommands.clique(abtestingMaps.linkAbTesting);
     }
 
     public void validarTituloPagina(String resultadoEsperado) {
-        Utils.validarMensagem(abtestingMaps.tituloPagina, resultadoEsperado );
+        PreencherCampos.validarMensagem(abtestingMaps.tituloPagina, resultadoEsperado );
     }
 
     public boolean validarResultadoTesteA() {
@@ -54,6 +55,6 @@ public class AbtestingPage {
     }
 
     public void validarTxtParagrafo() throws IOException {
-        Utils.validarMensagem(abtestingMaps.textoParagrafo,DadosTeste.getAbTestingParagrafo() );
+        PreencherCampos.validarMensagem(abtestingMaps.textoParagrafo,DadosTeste.getAbTestingParagrafo() );
     }
 }

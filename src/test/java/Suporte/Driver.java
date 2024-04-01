@@ -76,8 +76,6 @@ public class Driver {
         getDriver().quit();
     }
 
-    public static void invisibilityOf(WebElement element) {
-        wait.until(ExpectedConditions.invisibilityOf(element));
-    }
+
 
 }
