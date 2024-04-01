@@ -6,7 +6,7 @@ import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
 import pages.AddRemoveElementsPage;
 
-public class AddRemoveElementsSteps  {
+public class AddRemoveElementsSteps {
 
     AddRemoveElementsPage addRemoveElementsPage = new AddRemoveElementsPage();
 
@@ -14,22 +14,26 @@ public class AddRemoveElementsSteps  {
     public void eu_estou_na_pagina_inicial() {
         Driver.acessarSite("https://the-internet.herokuapp.com/");
     }
+
     @Quando("clicar em Add Remove Elements")
     public void clicar_em_add_remove_elements() {
-    addRemoveElementsPage.clicarlinkAddRemoveElements();
+        addRemoveElementsPage.clicarlinkAddRemoveElements();
     }
+
     @Quando("clicar em AddElement")
     public void clicar_em_add_element() {
-    addRemoveElementsPage.clicarAddElements();
+        addRemoveElementsPage.clicarAddElements();
     }
+
     @Quando("clicar em Delete")
     public void clicar_em_delete() {
-    addRemoveElementsPage.clicarDelete();
+        addRemoveElementsPage.clicarDelete();
 
     }
+
     @Entao("o botao Delete deve ser removido")
     public void o_botao_delete_deve_ser_removido() {
-    addRemoveElementsPage.validarTituloPagina();
-    addRemoveElementsPage.validarExclusaoBtnDelete();
+        addRemoveElementsPage.validarTituloPagina();
+        addRemoveElementsPage.validarExclusaoBtnDelete();
     }
 }

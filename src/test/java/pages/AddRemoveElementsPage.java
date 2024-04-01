@@ -1,7 +1,9 @@
 package pages;
 
 import Suporte.Driver;
-import Suporte.Utils;
+import Suporte.PreencherCampos;
+import Suporte.CliqueCommands;
+import Suporte.VisibilidadeElementosPagina;
 import maps.AddRemoveElementsMaps;
 
 public class AddRemoveElementsPage {
@@ -9,26 +11,26 @@ public class AddRemoveElementsPage {
     AddRemoveElementsMaps addRemoveElementsMaps = new AddRemoveElementsMaps();
 
     public void clicarlinkAddRemoveElements(){
-        Utils.clique(addRemoveElementsMaps.linkAddRemoveElements);
+        CliqueCommands.clique(addRemoveElementsMaps.linkAddRemoveElements);
     }
 
     public void clicarAddElements(){
-        Utils.clique(addRemoveElementsMaps.btnAddElement);
-        Utils.clique(addRemoveElementsMaps.btnAddElement);
-        Utils.clique(addRemoveElementsMaps.btnAddElement);
+        CliqueCommands.clique(addRemoveElementsMaps.btnAddElement);
+        CliqueCommands.clique(addRemoveElementsMaps.btnAddElement);
+        CliqueCommands.clique(addRemoveElementsMaps.btnAddElement);
     }
 
     public void clicarDelete(){
-        Utils.clique(addRemoveElementsMaps.btnDelete);
-        Utils.clique(addRemoveElementsMaps.btnDelete);
-        Utils.clique(addRemoveElementsMaps.btnDelete);
+        CliqueCommands.clique(addRemoveElementsMaps.btnDelete);
+        CliqueCommands.clique(addRemoveElementsMaps.btnDelete);
+        CliqueCommands.clique(addRemoveElementsMaps.btnDelete);
     }
 
     public void validarTituloPagina(){
-        Utils.validarMensagem(addRemoveElementsMaps.txtTituloPagina,"Add/Remove Elements");
+        PreencherCampos.validarMensagem(addRemoveElementsMaps.txtTituloPagina,"Add/Remove Elements");
     }
 
     public void validarExclusaoBtnDelete(){
-        Driver.invisibilityOf(addRemoveElementsMaps.btnDelete);
+        VisibilidadeElementosPagina.waitElementBeInvisible(addRemoveElementsMaps.btnDelete,10);
     }
 }
